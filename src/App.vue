@@ -1,23 +1,29 @@
 <template>
   <div id="app">
-    <img src="./assets/logo.png">
-    <router-view></router-view>
+    <Search></Search>
+    <MvList :keyword="searchCnt"></MvList>
+    <!-- <router-view></router-view> -->
   </div>
 </template>
 
 <script>
+import Search from './components/search'
+import MvList from './components/mvlist'
+
 export default {
-  name: 'app'
+  name: 'app',
+  components:{
+      Search,
+      MvList
+  },
+  data () {
+    searchCnt:"talyor"
+  }
+
+
 }
 </script>
 
 <style>
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
+
 </style>
