@@ -1,6 +1,6 @@
 <template>
     <form @submit.prevent="submit" action="">
-       <i class="fa fa-search" aria-hidden="true"></i> <input type="text" name="search" placeholder="搜索 歌曲/专辑/歌手" v-model="keyword" >
+       <i class="fa fa-search" aria-hidden="true"></i> <input type="text" name="search" placeholder="搜索 歌曲/专辑/歌手" v-model="keyword" @keyup.enter="hideKeyboard($event)">
     </form>
  
 </template>
@@ -14,9 +14,12 @@
         },
         methods:{
            submit : function(){
-               console.log(this.keyword)
                this.$store.commit('UPDATE_SEARCH_CONT',this.keyword)
-           }
+               this.$root.$emit('changeKey',this.keyword)
+           },
+           hideKeyboard: function(ev){
+              ev.target.blur();
+            }
         }
 
 
