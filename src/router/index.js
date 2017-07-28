@@ -8,6 +8,6 @@ import Detail from '../components/detail'
 export default new VueRouter({
     routes:[
     { path:"/" , component: App},
-    { path:"/song:id" , component: Detail}
+    { path:"/mv/:id" , name:"mv", component: Detail}
     ]
 })

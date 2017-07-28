@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <Search></Search>
-    <Navigation></Navigation>
+    <Navigation :show="navShow"></Navigation>
     <MvList :keyword="searchCnt"></MvList>
     <!-- <router-view></router-view> -->
   </div>
@@ -24,7 +24,7 @@ export default {
   //当一个组件需要获取多个状态时，我们可以使用 mapState 辅助函数帮助我们生成计算属性
   computed: {
       ...mapState([
-        'searchCnt'
+        'searchCnt','navShow'
       ])
   }
 

@@ -15,6 +15,7 @@
         methods:{
            submit : function(){
                this.$store.commit('UPDATE_SEARCH_CONT',this.keyword)
+               this.$store.commit('UPDATE_NAV_SHOW')
                this.$root.$emit('changeKey',this.keyword)
            },
            hideKeyboard: function(ev){

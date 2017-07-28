@@ -1,5 +1,5 @@
 <template>
- <div class="layout">
+ <div class="layout" v-if="show">
    <div class="header">
       <div class="nav">
         <mu-tabs :value="activeTab" @change="handleTabChange" class="tab">
@@ -18,6 +18,7 @@ export default {
       activeTab: 'tab1'
     }
   },
+ props : ['show'],
  methods: {
     handleTabChange (val) {
       this.activeTab = val

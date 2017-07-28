@@ -2,11 +2,11 @@
 <div class="gridlist-demo-container">
   <mu-grid-list class="gridlist-demo">
   <!--   <mu-sub-header>图片展示</mu-sub-header> -->
-    <mu-grid-tile v-for="content, index in mvList" :key="index">
+    <mu-grid-tile v-for="content, index in mvList" :key="index" >
       <img :src="content.cover"/>
       <span slot="title">{{content.name}}</span>
       <span slot="subTitle">by <b>{{content.artistName}}</b></span>
-      <mu-icon-button icon="star_border" slot="action"/>
+      <mu-icon-button icon="star_border" slot="action" :to="{ name: 'mv', params: { id: content.id }}"/>
     </mu-grid-tile>
   </mu-grid-list>
 </div>
@@ -33,13 +33,12 @@
         },
         methods:{
             getData : function(){
-            var that =this
-            this.$http.get(api.getMVs(this.key,10))
+            this.mvList = []
+            var that =this  //md巨坑爹，不加的话会报错说mvList未定义
+            this.$http.get(api.getMVList(this.key,10))
             .then(
                 function(response){
                   that.mvList = that.mvList.concat(response.data.result.mvs)
-                  console.log(response.data.result.mvs)
-                  console.log(that.mvList)
               },
                 function(err){
                 console.log(err)
