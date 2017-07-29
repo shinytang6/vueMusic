@@ -34,7 +34,7 @@
         methods:{
             getData : function(){
             this.mvList = []
-            var that =this  //md巨坑爹，不加的话会报错说mvList未定义
+            let that =this  //md巨坑爹，不加的话会报错说mvList未定义
             this.$http.get(api.getMVList(this.key,10))
             .then(
                 function(response){
@@ -43,6 +43,7 @@
                 function(err){
                 console.log(err)
               })
+
             }
         }
     }

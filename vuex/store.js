@@ -4,7 +4,8 @@ import Vuex from 'vuex'
 Vue.use(Vuex);
 const state = {
     "searchCnt" : "talyor",
-    "navShow" : true
+    "navShow" : true,
+    "source": ""
 }
 
 const mutations = {
@@ -12,8 +13,11 @@ const mutations = {
         state.searchCnt = cnt;
     },
     UPDATE_NAV_SHOW : function(state){
-        state.navShow= !state.navShow;
+        state.navShow = !state.navShow;
     },
+    UPDATE_SRC : function(state,src){
+        state.source = src;
+    }
 }
 
 export default new Vuex.Store({
