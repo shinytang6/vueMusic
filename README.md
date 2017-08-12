@@ -1,6 +1,16 @@
 # vue-music
 
-> A  Vue.js Music WebApp
+> This is a  Vue.js Music WebApp
+
+## 技术栈
+
+* axios
+* muse-ui
+* vue-cli
+* vue
+* vue-router
+* vuex
+* webpack
 
 ## Build Setup
 
@@ -26,5 +36,10 @@ npm run e2e
 # run all tests
 npm test
 ```
+
+
+## 接口地址
+
+[https://api.imjad.cn/cloudmusic.md](https://api.imjad.cn/cloudmusic.md)
 
 For detailed explanation on how things work, checkout the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
