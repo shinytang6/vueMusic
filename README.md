@@ -43,3 +43,6 @@ npm test
 [https://api.imjad.cn/cloudmusic.md](https://api.imjad.cn/cloudmusic.md)
 
 For detailed explanation on how things work, checkout the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
+
+
+项目未完成，有空再完善。。。
